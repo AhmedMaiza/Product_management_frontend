@@ -1,0 +1,54 @@
+<div class="custom-container container"> <!-- Smaller container -->
+    <div class="card">
+        <div class="card-header custom-bg-color text-white text-center"> <!-- Dark gray header -->
+            <h2 class="m-0">Modifier un Produit</h2>
+        </div>
+        <div class="card-body">
+                <form>
+                    <div hidden class="form-group">
+                        <label>ID Produit</label>
+                        <input type="text" [(ngModel)]="currentProduit.idProduit" name="idProduit" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nom Produit</label>
+                        <input type="text" [(ngModel)]="currentProduit.nomProduit" name="nomProduit" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Prix Produit</label>
+                        <input type="number" [(ngModel)]="currentProduit.prixProduit" name="prixProduit" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date création</label>
+                        <input type="date" [ngModel]="currentProduit.dateCreation | date: 'yyyy-MM-dd'"
+                            (ngModelChange)="currentProduit.dateCreation= $event" name="dateCreation" class="form-control">
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
+                        <label>Categorie</label>
+                        <select class="form-control form-control-lg" id="idCat" name="idCat" [(ngModel)]="updatedCatId">
+                            <option *ngFor="let cat of categories" [value]="cat.idCat">{{cat.nomCat}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <label class="mb-2">Preview:</label>
+                        <img [src]="myImage" class="img-fluid rounded" style="max-width: 100%; max-height: 200px" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="mb-2">Image :</label>
+                        <input type="file" (change)="onImageUpload($event)" class="form-control">
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" (click)="updateProduit()" class="custom-button">Modifier</button>
+                    </div>
+                </form>
+        </div>
+    </div>      
+</div>

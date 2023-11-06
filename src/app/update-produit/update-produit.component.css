@@ -1,0 +1,32 @@
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.custom-bg-color {
+    background-color: #6d90b6; /* Set the background color to #6d90b6 */
+  }
+
+.custom-button {
+    background-color: #6d90b6; /* Set your desired background color */
+    color: #fff; /* Set text color to white or a color that contrasts well with the background */
+    padding: 10px 20px; /* Adjust padding as needed for the button size */
+    border: none; /* Remove the button border */
+    border-radius: 15px; /* Add rounded corners to the button */
+    cursor: pointer; /* Show a pointer cursor on hover */
+    transition: background-color 0.3s; /* Add a smooth transition effect for color change */
+  }
+  
+  .custom-button:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .custom-button {
+      font-size: 14px; /* Adjust the font size for smaller screens */
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+  }
+  
+  
+  

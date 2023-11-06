@@ -1,0 +1,15 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.form-group {
+    margin-right: 10px;
+    text-align: left;
+}
